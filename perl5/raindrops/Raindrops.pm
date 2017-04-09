@@ -11,20 +11,11 @@ sub convert
 
 	my $output;
 
-	if( $input % 3 == 0 )
-	{
-		$output .= "Pling";
-	}
+	$output .= "Pling" if $input % 3 == 0;
 
-	if( $input % 5 == 0 )
-	{
-		$output .= "Plang";
-	}
+	$output .= "Plang" if $input % 5 == 0;
 
-	if( $input % 7 == 0 )
-	{
-		$output .= "Plong";
-	}
+	$output .= "Plong" if $input % 7 == 0;
 
 	return $output || $input;
 }
